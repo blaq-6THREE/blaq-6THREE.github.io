@@ -1,50 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zxx" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="hylton">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Pre UML, CS</title>
+
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+    <!--CSS============================================= -->
+    <link rel="stylesheet" href="../../css/linearicons.css">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
+    <header id="header">
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-has-children"><a href="">Documentation</a>
+                            <ul>
+                                <li><a href="html/comment.html">Comments</a></li>
+                                <li><a href="html/readme.html">READme</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="html/linuxcommands.html">Linux Commands</a>
+                        </li>
+                        <li>
+                            <a href="html/makefile.html">Makefiles</a>
+                        </li>
 
-  <div class="container">
-    <h1>GIT</h1>
-    <h3>What is GIT?</h3>
-    <p>Git is an open source VCS(Version Control System). What it basically means is it keeps track of the various changes done to a file and folder once the changes are <strong>STAGED</strong>&nbsp;and <strong>PUSHED</strong>. Do not worry about the bolded
-        text. We will get to understanding them later.</p>
-    <h3>Why GIT?</h3>
-    <p>I will not get into the history of VCS but rather state a couple of reasons why you would want to use GIT.</p>
-    <ul>
-        <li>Allows for perfect collaboration</li>
-        <li>There is good documentation for it</li>
-        <li>Easy to use</li>
-        <li>Easy to revert mistakes.</li>
-        <li>Branches, which we will get to allows for developing in parallel to the main repository.</li>
-    </ul>
-    <h3>Getting Started</h3>
-    <p>There are various ways to using GIT but we will be using the Command-Line Tools. I will expect you to know how to open Terminal in Mac or Command Prompt or Powershell in Windows. If you don't know what these are then stop here, go do research and
-        come back.
-    </p>
-    <h3>Installing GIT on Mac</h3>
-    <p>To install git on Mac OS run:</p>
-    <pre class="highlight"><code class="language-console" data-lang="console">$ git --version</code></pre>
-    <p>What this above line does is check if Git is installed. If it is, the current version of Git is returned. If not, it will prompt you to install it.</p>
-    <h3>Installing GIT on Windows</h3>
-    <p>To install git on Windows visit <a class="bare" href="http://git-scm.com/download/win">Here</a>.&nbsp;Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to <a class="bare" href="https://git-for-windows.github.io/">Git for Windows</a>.
-        <code class="language-console" data-lang="console"></code>
-    </p>
-    <p>The link below takes you to the official website where download will begin shortly.</p>
-    <p>Take a break. Once Git is installed continue to the next page.</p>
-    <p>&nbsp;</p>
-    <h3>&nbsp;</h3>
-    <p>If you are interested in reading more you can check out the <a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">GIT</a> website.</p>
+                        <li>
+                            <a href="html/git0.html">Git Tutorials</a>
+                        </li>
+                    </ul>
+                </nav><!-- #nav-menu-container -->
+            </div>
+        </div>
+    </header><!-- #header -->
+
+    <div class="container">
+        <h1>GIT</h1>
+        <h3>What is GIT?</h3>
+        <p>Git is an open source VCS(Version Control System). What it basically means is it keeps track of the various changes done to a file and folder once the changes are <strong>STAGED</strong>&nbsp;and <strong>PUSHED</strong>. Do not worry about the bolded
+            text. We will get to understanding them later.</p>
+        <h3>Why GIT?</h3>
+        <p>I will not get into the history of VCS but rather state a couple of reasons why you would want to use GIT.</p>
+        <ul>
+            <li>Allows for perfect collaboration</li>
+            <li>There is good documentation for it</li>
+            <li>Easy to use</li>
+            <li>Easy to revert mistakes.</li>
+            <li>Branches, which we will get to allows for developing in parallel to the main repository.</li>
+        </ul>
+        <h3>Getting Started</h3>
+        <p>There are various ways to using GIT but we will be using the Command-Line Tools. I will expect you to know how to open Terminal in Mac or Command Prompt or Powershell in Windows. If you don't know what these are then stop here, go do research and
+            come back.
+        </p>
+        <h3>Installing GIT on Mac</h3>
+        <p>To install git on Mac OS run:</p>
+        <pre class="highlight"><code class="language-console" data-lang="console">$ git --version</code></pre>
+        <p>What this above line does is check if Git is installed. If it is, the current version of Git is returned. If not, it will prompt you to install it.</p>
+        <h3>Installing GIT on Windows</h3>
+        <p>To install git on Windows visit <a class="bare" href="http://git-scm.com/download/win">Here</a>.&nbsp;Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to <a class="bare" href="https://git-for-windows.github.io/">Git for Windows</a>.
+            <code class="language-console" data-lang="console"></code>
+        </p>
+        <p>The link below takes you to the official website where download will begin shortly.</p>
+        <p>Take a break. Once Git is installed continue to the next page.</p>
+        <p>&nbsp;</p>
+        <h3>&nbsp;</h3>
+        <p>If you are interested in reading more you can check out the <a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git">GIT</a> website.</p>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    </div>
 </body>
+
 </html>
