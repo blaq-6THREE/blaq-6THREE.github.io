@@ -2,72 +2,176 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BootsTrap Tutorial</title>
+    <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="main.js"></script>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="hylton">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Pre UML, CS</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Blaq</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <header id="header">
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-has-children"><a href="">Documentation</a>
+                            <ul>
+                                <li><a href="comment.html">Comments</a></li>
+                                <li><a href="readme.html">READme</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="linuxcommands.html">Linux Commands</a>
+                        </li>
+                        <li>
+                            <a href="makefile.html">Makefiles</a>
+                        </li>
 
-        <!-- These are the links on the navigation bar -->
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav navbar-right">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Documentation</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="comment.html>Comments</a>
-                        <a class="dropdown-item" href="readme.html">README</a>
-                    </div>
-                </li>
-                <a class="nav-item nav-link" href="#">Makefile</a>
-                <a class="nav-item nav-link" href="#">Git & Github</a>
-                <a class="nav-item nav-link" href="linuxcommands.html">Linux Command Line Basics</a>
+                        <li>
+                            <a href="git0.html">Git Tutorials</a>
+                        </li>
+                    </ul>
+                </nav><!-- #nav-menu-container -->
             </div>
         </div>
-    </nav>
+    </header><!-- #header -->
 
-    <div class="container-fluid">
+    <section class="banner-area">
+        <div class="container">
+            <h3>Commenting</h3>
+            <h3><strong><em>Introduction</em></strong>:</h3>
+            <p>I was recently going through my 2 year old Java program when it hit me. I did not understand my own code at a glance. But why not? I wrote the code myself. The variable names looked weird, the methods and their parmeters looked weird. There were no comments, and if they were present they were badly written.</p>
 
-        <div class="row">
-            <div class="col-sm-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo facilis iure commodi repellat quia
-                    voluptatum perspiciatis alias, expedita debitis dolore, quasi dolorem incidunt sapiente fuga sit
-                    quas nesciunt cumque placeat.</p>
+            <p>Funny thing is, at the time it was a group project and no one complained. Because we were all present in one room whenever we worked on it we didn’t feel the need to comment through it. BUT this is bad practice. The present me is suffering because the old me didn’t take the time to comment though the source.</p>
+
+            <p>This tutorial serves to anwser the questions</p>
+
+            <ul>
+                <li>what are comments?</li>
+                <li>how to comment.</li>
+                <li>how not to comment.</li>
+            </ul>
+
+            <hr>
+
+            <p>What then are comment?</p>
+
+            <p>Commenting as an art is the use of high level language, English (whichever language you speak), to describe what your program does.</p>
+
+            <p>We shall examin some example code, and study how comments should be used in them.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Case A:</h4>
+                    <pre>
+                    <code>
+        // Let x be length
+        // Let y be width
+        // Let A be area of square
+                        
+        int x;
+        int y;
+        int a;
+                        
+        a = x * y;
+                    </code>
+                </pre>
+
+                    <p>Without knowing what the question was, the code written makes some sense. This is heavily due to the presence of comments. If we metally ommit them the variables x, y, a will not make sense, or at least it will take the reader a long time to figure out what the code means.</p>
+
+                    <p>With the comments serving as and explanations you are able to deduce that the code calculates the Area of a Rectangle.</p>
+
+                </div>
+
+                <div class="col-md-6">
+                    <h4>Case A:</h4>
+                    <pre>
+                    <code>
+        // Let x be length
+        // Let y be width
+        // Let A be area of square
+                        
+        int x;
+        int y;
+        int a;
+                        
+        a = x * y;
+                    </code>
+                </pre>
+
+                    <p>Without knowing what the question was, the code written makes some sense. This is heavily due to the presence of comments. If we metally ommit them the variables x, y, a will not make sense, or at least it will take the reader a long time to figure out what the code means.</p>
+
+                    <p>With the comments serving as and explanations you are able to deduce that the code calculates the Area of a Rectangle.</p>
+
+                </div>
             </div>
-            <div class="col-sm-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quos magni inventore distinctio
-                    similique suscipit minima amet minus officiis corrupti et reprehenderit voluptatum ullam dolorem
-                    eligendi, dolor ad deserunt asperiores.</p>
-            </div>
-            <div class="col-sm-4">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, velit alias excepturi magni
-                    eveniet labore. Eligendi esse, quia sed ducimus quas saepe eveniet nihil id quis labore. Adipisci,
-                    nisi ea.</p>
-            </div>
+
         </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
+        <hr>
+
+        <div class="container">
+            <p><strong><em>Body</em></strong>:</p>
+            <ul>
+                <li>As students, we are expected to comment through our source code. I know, Robert. Dr. Great Professor
+                    wants us
+                    to write comments on what the code is doing, yet we aren't taught to comment let alone comment
+                    properly.</li>
+                <li>We are given the notion that so far as there is a comment to explain, then you&rsquo;re all set.</li>
+                <li>But that is not the case. As stated &nbsp;by Dr. Bjarne Stroustrup, creator of C++, "comments should be
+                    to say
+                    things that you can not do well in code."</li>
+                <li>Sadly, most programming professors have no time to teach how</li>
+            </ul>
+            <ul>
+                <li>Naturally, most programming languages have 2 commenting approaches to them. They include:</li>
+            </ul>
+            <ol>
+                <li>Inline Commenting:</li>
+                <li>Descriptive Block Commenting:</li>
+            </ol>
+
+            <hr>
+
+            <p><strong><em>Conclusion</em></strong>:</p>
+            <p>In conclusion one must diligently put in effort in the selection of the identifiers. This means the names of
+                the
+                variables, classes, methods and what not must serve the purpose of their name. The importance of this
+                action is
+                that a properly named identifier cuts the user from having to provide comments for it.</p>
+            <p><br /><br /></p>
+            <p>int x =</p>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+
+    <!--            jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
