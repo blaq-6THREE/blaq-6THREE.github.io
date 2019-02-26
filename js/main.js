@@ -2,4 +2,9 @@
 $(document).ready(function () {
     "use script";
 
+    $(".menu-has-children").mouseenter(function () {
+        //alert("Mouse over worked");
+        $(".child").show();
+    });
+
 });
