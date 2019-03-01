@@ -29,35 +29,37 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="container main-menu">
-            <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    <a href="../../index.html"><img src="../../img/logo.png" alt="" title="" /></a>
-                </div>
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li class="menu-has-children"><a href="#">Documentation</a>
-                            <ul>
-                                <li><a href="../documentation/comment.html">Comments</a></li>
-                                <li><a href="../documentation/readme.html">READme</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="../linuxcommands/linuxcommands.html">Linux Commands</a>
-                        </li>
-                        <li>
-                            <a href="../makefile/makefile.html">Makefiles</a>
-                        </li>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #;">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../img/logo.png" width="130" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Documentation
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../documentation/comment.html">Comment</a>
+                        <a class="dropdown-item" href="../documentation/readme.html">READme</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../linuxcommands/linuxcommands.html">Linux Commands</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../makefile/makefile.html">Makefiles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../git/git0.html">Git Tutorials</a>
+                </li>
 
-                        <li>
-                            <a href="../git/git0.html">Git Tutorials</a>
-                        </li>
-                    </ul>
-                </nav><!-- #nav-menu-container -->
-            </div>
+            </ul>
         </div>
-    </header><!-- #header -->
+    </nav>
 
     <section class="banner-area">
         <div class="container">
