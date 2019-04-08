@@ -16,16 +16,12 @@ body {
     padding-top: 60px;
 }
 
-#left-main{
-    
-    
-}
+#left-main {}
 
-#right-hint {
+#right-hint {}
 
-}
-
-a, a::focus {
+a,
+a::focus {
     text-decoration: none !important;
     outline: 0;
 }
@@ -80,7 +76,7 @@ a:hover {
 /*  Homepage Styles
 /* =================================== */
 
-.navbar{
+.navbar {
     background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
     background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
     background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
@@ -118,6 +114,10 @@ a:hover {
 
 .primary-btn:hover {
     color: black;
+}
+
+.primary-btn:focus {
+    outline: none;
 }
 
 @media (max-width: 991px) {
