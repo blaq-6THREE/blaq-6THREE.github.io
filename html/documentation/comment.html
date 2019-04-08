@@ -18,18 +18,20 @@
     <title>Pre UML, CS</title>
 
     <!--Font-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!--CSS============================================= -->
     <link rel="stylesheet" href="../../css/linearicons.css">
     <link rel="stylesheet" href="../../css/main.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #ACE1FD">
+    <!-- This is the navigation bar used in every one of the HTML pages -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo.png" width="130" height="30" class="d-inline-block align-top" alt="">
         </a>
@@ -64,240 +66,155 @@
         </div>
     </nav>
 
-    <div class="container">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
 
-        <h3>Commenting</h3>
-
-        <p>30 minutes into looking at some 2 year old code written by these hands, it hit me! I did not understand my own code. The variable names looked weird, the methods and their parmeters looked weird, and worse of all, what was supposed to serve as my saving grace (comments) was not present. And when it was, it appeared badly written.</p>
-
-        <p>Funny thing is, the source code was for a group project and not one of the group members complained. We were all present in one room whenever we worked on the project yet nt a single soul felt the need to comment through it. </p>
-
-        <p>BUT this is bad practice. The present me now suffers the decisions the old me didn’t make which is taking the time to comment though the source code.</p>
-
-        <p>This tutorial serves to anwser the questions</p>
-
-        <ul>
-            <li>What are comments?</li>
-            <li>How to comment.</li>
-            <li>How not to comment.</li>
+            <!-- This is where the numbers will appear for pagination -->
+            <!-- It will be done through jQuery in the main.js file -->
+            
         </ul>
+    </nav>
 
-        <hr>
-
-        <p>What then are comment?</p>
-
-        <p>Commenting as an art is the use of high level language, English (whichever language you speak), to describe what your program does.</p>
-
-        <h4>NOTE: These are merely guidelines I developed. Take this as a “how I would have commented through my code."</h4>
-
-        <p>We shall examin some example code, and study how comments should be used in them.</p>
-
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <h4>Case A:</h4>
-                <pre>
-                    <code>
-    // Let x be length
-    // Let y be width
-    // Let A be area of square
-
-    int x;
-    int y;
-    int a;
-
-    a = x * y;
-                    </code>
-                </pre>
-
-                <p>Without knowing what the question was, the code written makes some sense. This is heavily due to the presence of comments. If we metally ommit them the variables x, y, a will not make sense, or at least it will take the reader a long time to figure out what the code is meant to do.</p>
-
-                <p>With the comments serving as explanations you are able to understand that the code calculates the Area of a Rectangle.</p>
-
+            <div id="loop" class="col-md-8 mx-1" id="left-main">
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 1</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi, repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa,
+                            aperiam similique in ducimus fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 2</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 3</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 4</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 5</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 6</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 7</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 8</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 9</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 9</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 10</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
+                <div class="list-group">
+                    <a href="javascript:void(0)" class="list-group-item-active">
+                        <h4 class="list-group-item-heading">Title 11</h4>
+                        <p class="list-group-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+                            natus commodi,
+                            repellendus magni provident placeat veniam quidem molestiae vel soluta ipsa, aperiam
+                            similique in ducimus
+                            fugit. Numquam sit quaerat nulla?</p>
+                    </a>
+                </div>
             </div>
-
-            <div class="col-md-6">
-                <h4>Case B:</h4>
-                <pre>
-                    <code>
-    double length = 0.0;
-    double width = 0.0;
-    double area = 0.0;
-
-    area = length * width;
-                    </code>
-                </pre>
-
-                <p>Again, without having to give it too much thought one is able to deduce from the equation written that it is an equation that uses the variables length and width.</p>
+            <div class="col-md-4 ml-1" id="right-hint">
 
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <p>As students, we are expected to comment through our source code. I know, Robert. Dr. Great Professor wants us to write comments on what the code is doing, yet we aren't taught to comment let alone comment properly.</p>
-
-        <p>We are given the notion that so far as there is a comment, it serves as an explanation, and you’re all set.</p>
-
-        <p>But that is not the case. As stated by Dr. Bjarne Stroustrup, creator of C++, "comments should be to say things that you can not do well in code."</p>
-
-        <p>Meaning, only put comments inside of your code if your code will be difficult to understand when glanced at.</p>
-
-        <p>Case 1 will be difficult to understand without comments and Case 2 will have no need for comments as it does a great job of naming variables.</p>
-
-
-        <p>Naturally, most programming languages have 2 commenting approaches to them. They include <b>Inline Commenting</b> &amp; <b>Block Commenting</b>.</p>
-    </div>
-
-    <div class="container">
-        <h5>Inline Commenting:</h5>
-
-        <p>Most programming languages have inline comments, but its use is pretty tricky. They serve the purpose of having to explain code that is not self documenting. That is, if it doesn’t make sense at a glance, comment it.</p>
-
-        <p>Do not overwhelm yourself or a reader of your code by providing comments for every line of code. </p>
-
-        <p>Let us consider Case C below.</p>
-
-        <pre>
-            <code>
-    double length = 0.0;
-    double width = 0.0;
-    double area = 0.0;
-
-    Scanner in = new Scanner(System.in);
-
-    length = in.nextDouble(); // allows user input for length
-    width = in.nextDouble(); // allows user input for width
-
-    area = length * width;
-
-    System.out.println("The area is " + area);
-            </code>
-        </pre>
-
-        <p>Case C above is what proper commenting should look like. You notice that without having to give it too much thought the equation written is understood.</p>
-
-        <p>Notice also that naming the variabes very well reduces the chance of redundancy. It is not needed to do the following in lines 1 to 3</p>
-
-        <pre>
-            <code>
-    // Let length be length
-    // Let width be width
-    // Let area be area of square
-
-    double length = 0.0;
-    double width = 0.0;
-    double area = 0.0;
-
-    Scanner in = new Scanner(System.in);
-
-    length = in.nextDouble(); // allows user input for length
-    width = in.nextDouble(); // allows user input for width
-
-    area = length * width;
-
-    System.out.println("The area is " + area);
-            </code>
-        </pre>
-
-        <p>when the variables names have done a good job at that.</p>
-
-        <p>It stresses the point of commenting. If variables are named properly, providing comments for every line of code becomes unnecessary. You only write comment to explain certain things, i.e. to explain what certain absurd lines of code do.</p>
-
-        <p>NOTE: Inline comments can be over used. DO NOT be that one person who has Inline comments on every line</p>
-    </div>
-
-    <div class="container">
-        <p>The main purpose to which Block Comments are used is their paragraphing ability. For instance, when you want to inlcude a lengthy explanation as to what a function does, Block Comments become bae. Consider the following;</p>
-
-        <pre>
-            <code>
-    public static void main(String[] args)
-    {
-    System.out.println("10 + 20 = " + getIntegerSum(10, 20));
-    System.out.println("20 x 40 = " + multiplyInteger(20, 40));
-    }
-
-    public static int getIntegerSum (int i, int j)
-    {
-    return i + j;
-    }
-
-    public static int multiplyInteger (int x, int y)
-    {
-    return x * y;
-    }
-            </code>
-        </pre>
-
-        <p>It doesn’t take a genius to figure out what the above methods do, however, their parameters are confusing. Regularly, one would have to use In-line comments to do a little bit of explaining but thanlkfully that isnt needed. The beauty of Block Commenting can be seen below.</p>
-
-        <pre>
-        <code>
-        /**
-        * @param args the command line arguments [Unused]
-        * @return Nothing
-        */
-        public static void main(String[] args)
-        {
-        Scanner in = new Scanner(System.in);
-
-        int firstInt = in.nextDouble();       // allows user input for length
-        int secondInt = in.nextDouble();      // allows user input for width
-
-        System.out.println("10 + 20 = " + getIntegerSum(firstInt, secondInt));
-        System.out.println("20 x 40 = " + multiplyInteger(firstInt, secondInt));
-        }
-
-        /**
-        * @param i The first integer
-        * @param j The second integer
-        * @return The sum of the integers
-        */
-        public static int getIntegerSum (int i, int j)
-        {
-        return i + j;
-        }
-
-        /**
-        * @param x The first integer
-        * @param y The second integer
-        * @return Nothing
-        */
-        public static int multiplyInteger (int x, int y)
-        {
-        System.out.println("The result is " + (x * y));
-        }
-
-
-        </code>
-    </pre>
-
-        <p>The main method/function above uses both Inline and Block Commenting. Looking at it at a glance, the comments bring the dead (absurd) part of the code to life.</p>
-
-    </div>
-
-
-
-    <hr>
-
-    <div class="container">
-        <h4>Conclusion:</h4>
-
-        <p>In conclusion one must diligently put in effort in the selection of the identifiers. This means the names of the variables, classes, methods and what not must serve the purpose of their name.</p>
-
-        <p>The importance of this action is that a properly named identifier cuts the reduces the risk of over commenting which in turn increases the chance of ones understanding.</p>
-
-        <p>Remember, comments are not for your present self, but for your future self, potential inheritors of your program, and anyone.</p>
-
-        <p>NOTE: To ensure proper commenting one should employ better naming of identifiers, and comments provided should be for lines of code that are difficult to understand.</p>
-
-        <p>Check this <a href="https://medium.freecodecamp.org/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83" target="_blank">link</a> out for more details.</p>
-    </div>
-
     <!--jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <script src="../../js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 </body>
 

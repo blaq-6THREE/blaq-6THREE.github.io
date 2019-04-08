@@ -1,51 +1,80 @@
-// target elements with the "draggable" class
-interact('.draggable')
-    .draggable({
-        // enable inertial throwing
-        inertia: true,
-        // keep the element within the area of it's parent
-        restrict: {
-            restriction: "parent",
-            endOnly: true,
-            elementRect: {
-                top: 0,
-                left: 0,
-                bottom: 1,
-                right: 1
-            }
-        },
-        // enable autoScroll
-        autoScroll: true,
+'use strict'
 
-        // call this function on every dragmove event
-        onmove: dragMoveListener,
-        // call this function on every dragend event
-        onend: function (event) {
-            var textEl = event.target.querySelector('p');
+var limit = 4;
+var numberOfItems = $("#loop .list-group").length;
+var totalNumberOfPages = Math.round(numberOfItems / limit);
 
-            textEl && (textEl.textContent =
-                'moved a distance of ' +
-                (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                    Math.pow(event.pageY - event.y0, 2) | 0))
-                .toFixed(2) + 'px');
-        }
-    });
+$("#loop .list-group:gt(" + (limit - 1) + ")").hide();
 
-function dragMoveListener(event) {
-    var target = event.target,
-        // keep the dragged position in the data-x/data-y attributes
-        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+// This provides the << arrow on the pagination
+$(".pagination").append("<li id='previous' class='page-item'><a class='page-link' href='javascript:void(0)' aria-label='Next'><spanaria-hidden='true'>&laquo;</span><span class='sr-only'>Next</span></a></li>");
 
-    // translate the element
-    target.style.webkitTransform =
-        target.style.transform =
-        'translate(' + x + 'px, ' + y + 'px)';
+$(".pagination").append("<li class='current-page active page-item'><a class='page-link' href='javascript:void(0)'>" + 1 + "</a></li>");
 
-    // update the posiion attributes
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
+// This loop provides the various numbers needed for the pagination
+for (let index = 2; index <= totalNumberOfPages; index++) {
+    $(".pagination").append("<li class='current-page page-item'><a class='page-link' href='javascript:void(0)'>" + index + "</a></li>");
 }
 
-// this is used later in the resizing and gesture demos
-window.dragMoveListener = dragMoveListener
+// This is the >> arrow needed for the pagination
+$(".pagination").append("<li id='next' class='page-item'><a class='page-link' href='javascript:void(0)' aria-label='Next'><span aria-hidden='true'>&raquo;</span><span class='sr-only'>Next</span></a></li>");
+
+$(".pagination li.current-page").on("click", function () {
+    if ($(this).hasClass("active")) {
+        return false;
+    }
+    else {
+        var currentPage = $(this).index();
+        $(".pagination li").removeClass("active");
+        $(this).addClass("active");
+        $("#loop .list-group").hide();
+        //alert(currentPage);
+
+        var grandTotal = limit * currentPage;
+        for (let i = grandTotal - limit; i < grandTotal; i++) {
+            $("#loop .list-group:eq(" + i + ")").show();
+        }
+    }
+});
+
+$("#next").on("click", function () {
+    var currentPage = $(".pagination li.active").index();
+
+    if (currentPage === totalNumberOfPages) {
+         return false;
+    }
+    else{
+        currentPage++;
+        $(".pagination li").removeClass("active");
+        $("#loop .list-group").hide();
+
+        var grandTotal = limit * currentPage;
+        for (let i = grandTotal - limit; i < grandTotal; i++) {
+            $("#loop .list-group:eq(" + i + ")").show();
+        }
+        $(".pagination li.current-page:eq(" + (currentPage - 1) +")").addClass("active");
+    }
+    alert(currentIndex);
+});
+
+$("#previous").on("click", function () {
+    var currentPage = $(".pagination li.active").index();
+
+    if (currentPage === 1) {
+        return false;
+    }
+    else {
+        currentPage--;
+        $(".pagination li").removeClass("active");
+        $("#loop .list-group").hide();
+
+        var grandTotal = limit * currentPage;
+        for (let i = grandTotal - limit; i < grandTotal; i++) {
+            $("#loop .list-group:eq(" + i + ")").show();
+        }
+        $(".pagination li.current-page:eq(" + (currentPage - 1) + ")").addClass("active");
+    }
+    alert(currentIndex);
+});
+
+//alert(totalNumberOfPages);
