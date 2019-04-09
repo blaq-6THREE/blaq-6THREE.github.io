@@ -13,12 +13,21 @@ body {
     color: black !important;
     background: #f9f9ff !important;
     font-family: 'Open Sans', sans-serif;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
-#left-main {}
+.pagination{
+    margin-left: 10px;
+}
 
-#right-hint {}
+.left {
+    background-color: antiquewhite
+}
+
+.right{
+    background-color: aqua;
+}
+
 
 a,
 a::focus {

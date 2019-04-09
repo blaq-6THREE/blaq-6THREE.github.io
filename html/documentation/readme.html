@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="../../css/linearicons.css">
     <link rel="stylesheet" href="../../css/main.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -64,29 +65,151 @@
         </div>
     </nav>
 
-    <section class="banner-area">
-        <div class="container">
-            <p>Imagine having to pick up a Calculus Text Book with 569 pages worth of information. The information contained in it
-                has no simple reading text, just numbers and symbols. The author of the notebook just neglected&nbsp;</p>
-            <p>That is the importance of <strong>documentation </strong>-- the purpose of <strong>READMEs</strong>. Documenting
-                your code, beit commenting through them or writing READMEs is just like writing a clean cookbook. It provides for
-                the user or the individual who inherits your a strong foundation to better understand what is going on in the code.</p>
+    <div class="container-fluid">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
 
-            <ul>
-                <li>title</li>
-                <li>What project is about</li>
-                <li>known bugs</li>
-                <li>how to run code</li>
+                <!-- This is where the numbers will appear for pagination -->
+                <!-- It will be done through jQuery in the main.js file -->
+
             </ul>
-        </div>
-    </section>
+        </nav>
 
-    <script src="js/main.js"></script>
+        <div class="row">
+            <div id="master-div" class="left col-sm-8">
+                <div class="list-group">
+                    <h3>READme</h3>
+            
+                    <p>Imagine having to pick up a Calculus Textbook with 569 pages worth of information. What is contained in the
+                        book is no
+                        simple text, just number and symbols. Almost as if the author of the book just negelected to write words
+                        humans could
+                        understand.</p>
+            
+                    <p>The author sucks, right? Yea! I know! But check this out. The author is you and I and the reader of our books
+                        are the
+                        Professors, our friends and our future selves.</p>
+            
+                    <p>Very briefly, this tutorial will serves to answer</p>
+            
+                    <ul>
+                        <li>What a READme is,</li>
+                        <li>stress the importance</li>
+                        <li>structure to a simple READme</li>
+                    </ul>
+            
+                    <h2>What then is a READme file?</h2>
+            
+                    <p>A READme file is a text file (.txt, .md) that contains information about the software created for you (future
+                        you), the
+                        client, user, and anyone who could be a beneficiary of the software at hand. All for the user.</p>
+            
+                    <p>That is the importance of the documentation — the purpose of READMEs. Documenting your code, beit commenting
+                        of writing
+                        READmes is just like a clean cookbook. When thourghly written, it provides for the user or the implementator
+                        a stronger
+                        foundation to better feel as to how well to use the software or program at hand. I exists to help humans
+                        make sense of
+                        the code that we have written.</p>
+            
+                    <p>To be specific, READme as a documentation is to humans as code is to computers — well, your future self, a
+                        future
+                        employer, and many others. However, when writing a READme file, you should write them as though a 5 year old
+                        was going
+                        to use them as a manual before using your software.</p>
+            
+                    <p>You will want it to be easy for anyone to dive into your code and get it up and running without any hiccups!
+                    </p>
+            
+                </div>
+                <div class="list-group">
+                    <h3>Anatomy of a READme file</h3>
+            
+                    <hr>
+            
+                    <h4>Title:</h4>
+                    <p>Well, this is what the name says it is.</p>
+            
+                    <h4>Description:</h4>
+                    <p>With this a sentence or two would be good. Be sure to put enough context to capture the spirit of your
+                        project to get
+                        the user up and running.</p>
+            
+                    <h4>Installation:</h4>
+                    <p>Provide for the user the “HOW" to install your program. This step is most critical as it is what will lead
+                        the way to
+                        how to better use your program.</p>
+            
+                    <p>Here, you include step by step process to install the application.</p>
+            
+                    <p>Make mention of any needed dependancies and/or libraries that should be installed before installation.</p>
+            
+                    Also, be sure to specify the process if they are Operating System specific. That is, consider the main OS that
+                    your program would run on and give related details for them.
+            
+                    <p>Also, be sure to specify the process if they are Operating System specific. That is, consider the main OS
+                        that your
+                        program would run on and give related details for them.</p>
+            
+                    <p>BEWARE: Users may have a hard time with this part of of your READme. Be sure to use simple vocabulary and DO
+                        NOT FORGET.
+                        Consider every step in this part.</p>
+            
+                    <h4>Useage:</h4>
+                    <p>Once you’re confident about the steps provided in the installation process you provide them with using the
+                        application.</p>
+            
+                    <p>Here you provide examples must be included to show the proper use of your application.</p>
+            
+                    <h4>Bugs:</h4>
+                    <p>Here you do what most us us artists, aka CS majors hate to do. You must include the possible bugs in your
+                        code.</p>
+            
+                    <p>Only you can provide this since you wrote your code and what state it currently is in.</p>
+            
+                    <h4>License</h4>
+                    <p>Sooner or later your application, be it school project or personal prjects may grow and lisencing will be
+                        needed.</p>
+            
+                    <p>By default you have every right to your code, but including a license is important. This is becase of future
+                        contributions. Your project may be open to contributions in which case it will be super important to include
+                        a license.</p>
+            
+                    <p>I have very limited knowledge on licensing, however, https://choosealicense.com/ should help you get settle
+                        on that.</p>
+                </div>
+                <div class="list-group">
+                    <p>I have very limited knowledge on licensing, however, https://choosealicense.com/ should help you get settle
+                        on that.</p>
+            
+                    <ol>
+                        <li>get them up and running,</li>
+                        <li>cut them from having to examin the source code for clarity,</li>
+                    </ol>
+            
+                    <p>And bove all your READme must prevent users from having to reverse engineer your code to figure out your
+                        thought process</p>
+                </div>
+            </div>
+        </div> <!-- end of row-div -->
+
+        <div class="right col-md-4" id="right-hint">
+            
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
 
     <!--jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
