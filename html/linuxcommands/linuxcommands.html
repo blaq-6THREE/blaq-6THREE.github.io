@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #ACE1FD">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo.png" width="130" height="30" class="d-inline-block align-top" alt="">
         </a>
@@ -46,18 +46,19 @@
                         Documentation
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="../documentation/comment.html">Comment</a>
-                        <a class="dropdown-item" href="../documentation/readme.html">READme</a>
+                        <a class="dropdown-item" href="../../html/documentation/comment.html">Comment</a>
+                        <a class="dropdown-item" href="../../html/html/documentation/readme.html">READme</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../linuxcommands/linuxcommands.html">Linux Commands</a>
+                    <a class="nav-link" href="../../html/linuxcommands/linuxcommands.html">Linux Commands <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../makefile/makefile.html">Makefiles</a>
+                    <a class="nav-link" href="../../html/makefile/makefile.html">Makefiles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../git/git0.html">Git Tutorials</a>
+                    <a class="nav-link" href="../../html/git/git0.html">Git Tutorials</a>
                 </li>
 
             </ul>
@@ -74,162 +75,231 @@
             </ul>
         </nav>
 
+        <h3>Linux Commands</h3>
+
         <div class="row">
             <div id="master-div" class="left col-sm-8">
                 <div class="list-group">
-                    <h3>READme</h3>
+                    <p>Hello, and welcome. In this course you will learn the basic command line tool you will need to
+                        use the cdm or the
+                        terminal.</p>
 
-                    <p>Imagine having to pick up a Calculus Textbook with 569 pages worth of information. What is
-                        contained
-                        in the
-                        book is no
-                        simple text, just number and symbols. Almost as if the author of the book just negelected to
-                        write
-                        words
-                        humans could
-                        understand.</p>
+                    <p>Please ask yourself the same question I am asking myself, which is WHY DO I SOUND SO POLITE. UGH!
+                    </p>
 
-                    <p>The author sucks, right? Yea! I know! But check this out. The author is you and I and the reader
-                        of
-                        our books
-                        are the
-                        Professors, our friends and our future selves.</p>
+                    <p>You have probably used a command line interface before. Javascript on the web, or the interprator
+                        for Python.</p>
 
-                    <p>Very briefly, this tutorial will serves to answer</p>
+                    <p>The idea of a CLI gpes back to the mid 20th Century. It was one one of the only ways that people
+                        had to communicate with
+                        the computer.</p>
+
+                    <p>Today, terminal usually means a piece of software but it originally meant a physical piece of
+                        hardware for interacting
+                        with the computer. Before terminals, there was the use of punch cards to insert information into
+                        computers loading a
+                        batch all at once.</p>
+
+                    <p>The terminal was a major improvement. it allowed information to be input not at once, but anyhow
+                        and showed results
+                        immediately. This explains why it is being used till date.</p>
+
+                    <p>The CLI is programmable, efficient in its use of network bandwidth nd you can use them to edit
+                        files in a remote system
+                        without having to first copy them into your ocal machine. In general you can be much more
+                        expressive with the CLI than
+                        you could ever be with pointing and clicking.</p>
+
+                </div>
+
+                <div class="list-group">
+                    <h4>Command Line Interface</h4>
+
+                    <p>There are command line systems everywhere. Google Chrome has a developer tool section that
+                        provides a CLI. Python also
+                        provides a CLI to use with their inteprator ( Python's interactive interpreter.). A Command Line
+                        Interface therefore is
+                        any computer interface where the user enters textual commands and gets textual responses back.
+                    </p>
+
+                    <img src="../../img/linux_images/cli_image.png" alt="sample command line interface">
+
+                    <p>Whilst CLIs vary significantly, proficiency in one will give you a head start learning another.
+                    </p>
+
+                    <p>In this tutrial, we mostly wore with the Linux Command Line Interface in a VM, however, in order
+                        to access that you need
+                        to use your OS’s host OS’s command inteface.</p>
+                </div>
+
+                <div class="list-group">
+                    <h3>Setting Up Your Own Linux Box</h3>
+                </div>
+
+                <div class="list-group">
+                    <h3>Log In and Break Stuff</h3>
+
+                    <p>I am sure you have setup the CLI successfully and if this seems new to you you’re eager to see
+                        how it works.</p>
+
+                    <p>Let us break stuff.</p>
+
+                    <h1>[INSERT GIF]</h1>
+
+                    <p>Using the $ sign as a landmark lets begin. The left of the $ sign shows your current position.
+                        That is, what folder you
+                        are currently on.</p>
+
+                    <p>Just like when you turn on your Computer your working environment by default is the desktop, by
+                        default the HOME
+                        DIRECTORY is the working which is shown on the left side of the $ sign.</p>
+
+                    <p> <b>NOTE:</b> Do not forget, the CLI is a textual representation of the UI we are so familair
+                        with.</p>
+
+                    <h1>[INSERT GIF]</h1>
+
+                    <p>The right side of the $ is where you type your instructions.</p>
+
+                    <p>Now then, type in anything and hit enter. Do not worry if you see something as below. It is
+                        perfectly normal as whatever
+                        was typed randomly was not a correct instruction.</p>
+
+                    <p>Try this also:</p>
+
+                    <p>Which is the right way to use an apostrophe. “‘?"</p>
+
+                    <h1>[INSERT GIF]</h1>
+
+                    <p>Answer the question below by draging and dropping the item into the right place.</p>
+                </div>
+
+                <div class="list-group">
+                    <h3>PAGE 2: Working Commands</h3>
+
+                    <h4>Try:</h4>
+
+                    <h1>[INSERT GIF]</h1>
+
+                    <p>What ls does is list the out all the files in your current directory.In my case I have 2 files,
+                        and 2 folders and their
+                        names and extension is what is shwon in the terminal.</p>
+
+                    <p>Question:</p>
+
+                    <p>Which of these activities do you expect can be readily done using the terminal?</p>
 
                     <ul>
-                        <li>What a READme is,</li>
-                        <li>stress the importance</li>
-                        <li>structure to a simple READme</li>
+                        <li>Edit and run a program</li>
+                        <li>Find files on your computer that have particular name</li>
+                        <li>Download a file from the web, if you know its Url</li>
+                        <li>Edit a mjor motion picture</li>
+                        <li>Start a web server on your computer</li>
+                        <li>Start a web server in the cloud</li>
+                        <li>Break the entire internet</li>
                     </ul>
-
-                    <h2>What then is a READme file?</h2>
-
-                    <p>A READme file is a text file (.txt, .md) that contains information about the software created for
-                        you
-                        (future
-                        you), the
-                        client, user, and anyone who could be a beneficiary of the software at hand. All for the user.
-                    </p>
-
-                    <p>That is the importance of the documentation — the purpose of READMEs. Documenting your code, beit
-                        commenting
-                        of writing
-                        READmes is just like a clean cookbook. When thourghly written, it provides for the user or the
-                        implementator
-                        a stronger
-                        foundation to better feel as to how well to use the software or program at hand. I exists to
-                        help
-                        humans
-                        make sense of
-                        the code that we have written.</p>
-
-                    <p>To be specific, READme as a documentation is to humans as code is to computers — well, your
-                        future
-                        self, a
-                        future
-                        employer, and many others. However, when writing a READme file, you should write them as though
-                        a 5
-                        year old
-                        was going
-                        to use them as a manual before using your software.</p>
-
-                    <p>You will want it to be easy for anyone to dive into your code and get it up and running without
-                        any
-                        hiccups!
-                    </p>
-
                 </div>
+
                 <div class="list-group">
-                    <h3>Anatomy of a READme file</h3>
+                    <h3>Page 3: OverView Of CLI</h3>
 
-                    <hr>
+                    <h1>[Insert gif]</h1>
 
-                    <h4>Title:</h4>
-                    <p>Well, this is what the name says it is.</p>
+                    <p>Most CLI look similar. they usually include the login user’s name, the host name(name of computer
+                        log into), and some
+                        information such as the current time and what folder the user is in.</p>
 
-                    <h4>Description:</h4>
-                    <p>With this a sentence or two would be good. Be sure to put enough context to capture the spirit of
-                        your
-                        project to get
-                        the user up and running.</p>
+                    <p>You can new commands after every prompt. After hitting enter, the command runs and the output is
+                        rinted to the screen.</p>
 
-                    <h4>Installation:</h4>
-                    <p>Provide for the user the “HOW" to install your program. This step is most critical as it is what
-                        will
-                        lead
-                        the way to
-                        how to better use your program.</p>
+                    <p>After the output is printed, a fresh prompt is added to the bottom of the terminal ready for your
+                        next command.</p>
 
-                    <p>Here, you include step by step process to install the application.</p>
+                    <p>See if you can lable the parts fo the CLI below.</p>
 
-                    <p>Make mention of any needed dependancies and/or libraries that should be installed before
-                        installation.</p>
-
-                    Also, be sure to specify the process if they are Operating System specific. That is, consider the
-                    main
-                    OS that
-                    your program would run on and give related details for them.
-
-                    <p>Also, be sure to specify the process if they are Operating System specific. That is, consider the
-                        main OS
-                        that your
-                        program would run on and give related details for them.</p>
-
-                    <p>BEWARE: Users may have a hard time with this part of of your READme. Be sure to use simple
-                        vocabulary
-                        and DO
-                        NOT FORGET.
-                        Consider every step in this part.</p>
-
-                    <h4>Useage:</h4>
-                    <p>Once you’re confident about the steps provided in the installation process you provide them with
-                        using the
-                        application.</p>
-
-                    <p>Here you provide examples must be included to show the proper use of your application.</p>
-
-                    <h4>Bugs:</h4>
-                    <p>Here you do what most us us artists, aka CS majors hate to do. You must include the possible bugs
-                        in
-                        your
-                        code.</p>
-
-                    <p>Only you can provide this since you wrote your code and what state it currently is in.</p>
-
-                    <h4>License</h4>
-                    <p>Sooner or later your application, be it school project or personal prjects may grow and lisencing
-                        will be
-                        needed.</p>
-
-                    <p>By default you have every right to your code, but including a license is important. This is
-                        becase of
-                        future
-                        contributions. Your project may be open to contributions in which case it will be super
-                        important to
-                        include
-                        a license.</p>
-
-                    <p>I have very limited knowledge on licensing, however, https://choosealicense.com/ should help you
-                        get
-                        settle
-                        on that.</p>
-                </div>
-                <div class="list-group">
-                    <p>I have very limited knowledge on licensing, however, https://choosealicense.com/ should help you
-                        get
-                        settle
-                        on that.</p>
+                    <h1>[Insert picture]</h1>
 
                     <ol>
-                        <li>get them up and running,</li>
-                        <li>cut them from having to examin the source code for clarity,</li>
+                        <li>Shell command</li>
+                        <li>Command output</li>
+                        <li>current prompt</li>
+                        <li>previous prompt</li>
+                        <li>Cursor</li>
+                        <li>login message</li>
                     </ol>
+                </div>
 
-                    <p>And bove all your READme must prevent users from having to reverse engineer your code to figure
-                        out
-                        your
-                        thought process</p>
+                <div class="list-group">
+                    <h3>Page 4: Terminal vs The Shell</h3>
+
+                    <p>One thing to underatnd isn the dfferent between the terminal and the shell.</p>
+
+                    <p>The terminal is a program that draws text in its windows and lets you type things in with the
+                        keyboard.</p>
+
+                    <p>The termnal itself doesnt know what to do with that input. It relies on the shell for that. WHen
+                        you tye things into the
+                        terminal, it sends what is typed to The Shell which is a separate program.</p>
+
+                    <p>When you press Enter, the shell interprets what you typed in as a command, inteprates that
+                        command, figures out what
+                        program you want to run, runs it and sends the output nack to the terminal so you can view it.
+                    </p>
+
+                    <p>Although there are a lot of shell programs you can choose from such as TCSH, KSH and Seashell,
+                        etc. they all. work very
+                        slightly and have various different features</p>
+
+                    <p>The default one on the Linux system and the Mac is called the GNU bash. For this tutorial we will
+                        be using the GNU Bash.</p>
+
+                    <p><b>NOTE:</b> You can also use the shell wthout the terminal. You can write shell commands into a
+                        file and arrange for your to
+                        computer to run the shell program on that file. This is called shell scripting and that is
+                        beyoud the scope of this
+                        programmer. LOL.</p>
+                </div>
+
+                <div class="list-group">
+                    <h3>Page 5: Command Trial</h3>
+
+                    <p>The best way to use the shell is to keep trying over and over again.</p>
+
+                    <p>Below is are 8 sample linux commands. Match the green texts, commands, to the correct meaning in functionality. Match the green fields to the right blue fields.</p>
+
+                    <ul>
+                        <li>Date</li>
+                        <li>expr 2 + 2</li>
+                        <li>echo you rock</li>
+                        <li>uname</li>
+                        <li>hostname</li>
+                        <li>host GitHub.com</li>
+                        <li>bash --version</li>
+                        <li>history</li>
+                    </ul>
+
+                    <p><b>NOTE:</b> You may notice that some commands are just one word whikst others have 1 or more words following them. They are called command line arguments. They are inputs you provide to some command line inputs when you run it. The command name is just the first word and whatever follows it is the command line arguments.</p>
+                </div>
+
+                <div class="list-group">
+                    <h3>Page 6: Thinking The Terminal way</h3>
+
+                    <p>The key thing to take away from this tutorial is that you would want to think of terminal commands as function calls.</p>
+
+                    <h1>[INSERT GIF] => rm crazyfile.txt</h1>
+
+                    <p>the above command can be carried out in code also. os.remove(“crazyfile.txt”)</p>
+
+                    <p>Notice that they bare similarities. They both take the file names as their parameter, however, they both call the
+                    commands differently.</p>
+
+                    <p>Functions are used to orgranize a program, whereas Shell commands are used to run programs.</p>
+
+                </div>
+                <div class="list-group">
+                    <h4>[INSERT PICTURE WITH NUMBERS ON SIDE AND HAVE USER DRAG AND DROP RIGHT ANSWERS</h4>
+
+                    <p>Congratulations. You just completed lesson 1.</p>
                 </div>
             </div>
         </div> <!-- end of row-div -->
