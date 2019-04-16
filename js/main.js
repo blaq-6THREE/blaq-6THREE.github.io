@@ -1,10 +1,10 @@
 'use strict'
 
 var limit = 1;
-var numberOfItems = $("#master-div .list-group").length;
+var numberOfItems = $(".master-div .list-group").length;
 var totalNumberOfPages = Math.round(numberOfItems / limit);
 
-$("#master-div .list-group:gt(" + (limit - 1) + ")").hide();
+$(".master-div .list-group:gt(" + (limit - 1) + ")").hide();
 
 // This provides the << arrow on the pagination
 $(".pagination").append("<li id='previous' class='page-item'><a class='page-link' href='javascript:void(0)' aria-label='Next'><spanaria-hidden='true'>&laquo;</span><span class='sr-only'>Next</span></a></li>");
@@ -27,12 +27,12 @@ $(".pagination li.current-page").on("click", function () {
         var currentPage = $(this).index();
         $(".pagination li").removeClass("active");
         $(this).addClass("active");
-        $("#master-div .list-group").hide();
+        $(".master-div .list-group").hide();
         //alert(currentPage);
 
         var grandTotal = limit * currentPage;
         for (let i = grandTotal - limit; i < grandTotal; i++) {
-            $("#master-div .list-group:eq(" + i + ")").show();
+            $(".master-div .list-group:eq(" + i + ")").show();
         }
     }
 });
@@ -46,11 +46,11 @@ $("#next").on("click", function () {
     else{
         currentPage++;
         $(".pagination li").removeClass("active");
-        $("#master-div .list-group").hide();
+        $(".master-div .list-group").hide();
 
         var grandTotal = limit * currentPage;
         for (let i = grandTotal - limit; i < grandTotal; i++) {
-            $("#master-div .list-group:eq(" + i + ")").show();
+            $(".master-div .list-group:eq(" + i + ")").show();
         }
         $(".pagination li.current-page:eq(" + (currentPage - 1) +")").addClass("active");
     }
@@ -66,11 +66,11 @@ $("#previous").on("click", function () {
     else {
         currentPage--;
         $(".pagination li").removeClass("active");
-        $("#master-div .list-group").hide();
+        $(".master-div .list-group").hide();
 
         var grandTotal = limit * currentPage;
         for (let i = grandTotal - limit; i < grandTotal; i++) {
-            $("#master-div .list-group:eq(" + i + ")").show();
+            $(".master-div .list-group:eq(" + i + ")").show();
         }
         $(".pagination li.current-page:eq(" + (currentPage - 1) + ")").addClass("active");
     }
