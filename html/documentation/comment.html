@@ -17,12 +17,14 @@
     <!-- Site Title -->
     <title>Pre UML, CS</title>
 
-    <!--Font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- https://highlightjs.org/ -->
 
     <!--CSS============================================= -->
-    <link rel="stylesheet" href="../../css/linearicons.css">
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/comment.css">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -68,20 +70,19 @@
     </nav>
 
     <div class="container-fluid">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-
-                <!-- This is where the numbers will appear for pagination -->
-                <!-- It will be done through jQuery in the main.js file -->
-
-            </ul>
-        </nav>
-
+        <h2>Commenting</h2>
+        
         <div class="row">
-            <div id="master-div" class="left col-sm-8">
-                <div class="list-group">
-                    <h2>Commenting</h2>
+            <div class="left-content col-md-2">
+                <ul class="left-ul">
+                    <li class="list-item" onclick="viewSelector(event, 'intro')">Menu 1</li>
+                    <li class="list-item" onclick="viewSelector(event, 'mid')">Menu 2</li>
+                    <li class="list-item" onclick="viewSelector(event, 'end')">Menu 3</li>
+                </ul>
+            </div>
 
+            <div id="master-div" class="left col-sm-7 middle-content">
+                <div class="list-group">
                     <p>30 minutes into looking at some 2 year old code written by these hands, it hit me! I did not
                         understand my own code. The
                         variable names looked weird, the methods and their parmeters looked weird, and worse of all,
@@ -115,14 +116,29 @@
 
                     <p>We shall examin some example code, and study how comments should be used in them.</p>
                 </div>
+
+                <hr>
+
                 <div class="list-group">
                     <p>Consider the following cases</p>
 
                     <h3>Case A:</h3>
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+<pre>
+    <code class="java">
+    // Let x be length
+    // Let y be width
+    // Let A be area of square
+
+    int x = 0;
+    int y = 0;
+    int a = 0;
+    .
+    .
+    .
+    a = x * y;
+    </code>
+</pre>
 
                     <p>Without knowing what the question was, the code written makes some sense. This is heavily due to
                         the presence of
@@ -135,9 +151,17 @@
 
                     <h3>Case B:</h3>
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+<pre>
+    <code class="java">
+    double length = 0.0;
+    double width = 0.0;
+    double area = 0.0;
+    .
+    .
+    .
+    area = length * width;
+    </code>
+</pre>
 
                     <p>Again, without having to give it too much thought one is able to deduce from the equation written
                         that it is an equation
@@ -163,13 +187,15 @@
                         as it does a great job
                         of naming variables.</p>
 
-                    <h4>Naturally, most programming languages have 2 commenting approaches to them. They include Inline
-                        Commenting & Block
-                        Commenting.</h4>
-
-
+                    <p>We will examin the types of comments next.</p>
                 </div>
+
+                <hr>
+
                 <div class="list-group">
+
+                    <h4>Naturally, most programming languages have 2 commenting approaches to them. They include Inline Commenting & Block Commenting.</h4>
+
                     <h3>Inline Commenting:</h3>
                     <p>Most programming languages have inline comments, but its use is pretty tricky. They serve the
                         purpose of having to
@@ -183,9 +209,22 @@
 
                     <h4>Case C:</h4>
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+<pre>
+    <code class="java">
+    double length = 0.0;
+    double width = 0.0;
+    double area = 0.0;
+
+    Scanner in = new Scanner(System.in);
+
+    length = in.nextDouble(); // allows user input for length
+    width = in.nextDouble(); // allows user input for width
+
+    area = length * width;
+
+    System.out.println("The area is " + area);
+    </code>
+</pre>
 
                     <p>Case C above is what proper commenting should look like. You notice that without having to give
                         it
@@ -197,9 +236,26 @@
                         do the following in
                         lines 1 to 3.</p>
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+<pre>
+    <code class="java">
+    // Let length be length
+    // Let width be width
+    // Let area be area of square
+
+    double length = 0.0;
+    double width = 0.0;
+    double area = 0.0;
+
+    Scanner in = new Scanner(System.in);
+
+    length = in.nextDouble(); // allows user input for length
+    width = in.nextDouble(); // allows user input for width
+
+    area = length * width;
+
+    System.out.println("The area is " + area);
+    </code>
+</pre>
 
                     <p>when the variables names have done a good job at that.</p>
 
@@ -226,9 +282,25 @@
                         following;
                     </p>
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+<pre>
+    <code class="java">
+    public static void main(String[] args)
+    {
+        System.out.println("10 + 20 = " + getIntegerSum(10, 20));
+        System.out.println("20 x 40 = " + multiplyInteger(20, 40));
+    }
+    
+    public static int getIntegerSum (int i, int j)
+    {
+        return i + j;
+    }
+    
+    public static int multiplyInteger (int x, int y)
+    {
+        return x * y;
+    }
+    </code>
+</pre>
 
                     <p>It doesn’t take a genius to figure out what the above methods do, however, their parameters are
                         confusing. Regularly,
@@ -236,10 +308,45 @@
                         isnt
                         needed. The beauty of
                         Block Commenting can be seen below.</p>
+<pre>
+    <code class="java">
+    /**
+    * @param args the command line arguments [Unused]
+    * @return Nothing
+    */
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        
+        int firstInt = in.nextDouble(); // allows user input for length
+        int secondInt = in.nextDouble(); // allows user input for width
+        
+        System.out.println("10 + 20 = " + getIntegerSum(firstInt, secondInt));
+        System.out.println("20 x 40 = " + multiplyInteger(firstInt, secondInt));
+    }
+    
+    /**
+    * @param i The first integer
+    * @param j The second integer
+    * @return The sum of the integers
+    */
+    public static int getIntegerSum (int i, int j)
+    {
+        return i + j;
+    }
+    
+    /**
+    * @param x The first integer
+    * @param y The second integer
+    * @return Nothing
+    */
+    public static int multiplyInteger (int x, int y)
+    {
+        System.out.println("The result is " + (x * y));
+    }
 
-                    <div class="">
-                        <p>to be drawn</p>
-                    </div>
+    </code>
+</pre>
 
                     <p>The main method/function above uses both Inline and Block Commenting. Looking at it at a glance,
                         the
@@ -266,24 +373,23 @@
                         provided should be for
                         lines of code that are difficult to understand.</p>
 
-                    <p>Check this link out for more details.
-                        (https://medium.freecodecamp.org/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83)</p>
+                    <p>Check <a href="https://medium.freecodecamp.org/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83">this</a> out for more details.</p>
                 </div>
 
             </div> <!-- end of master-div -->
+
+            <div class="col-md-3">
+                <div id="right-hint" class="right-content">
+                
+                </div>
+            </div>            
         </div> <!-- end of row-div -->
-
-        <div class="right col-md-4" id="right-hint">
-
-        </div>
     </div>
+    <script src="../../js/main.js"></script>
 
     <!--jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    <script src="../../js/main.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>

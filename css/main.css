@@ -1,18 +1,8 @@
-::-moz-selection {
-    /* Code for Firefox */
-    background-color: #8490ff;
-    color: #fff;
-}
-
-.banner-area,
-.container {
-    background: #f9f9ff;
-}
-
 body {
     color: black !important;
     background: #f9f9ff !important;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto" !important;
+    font-size: 15px !important;
     padding-top: 70px;
 }
 
@@ -22,32 +12,6 @@ body {
 
 .right{
     background-color: aqua;
-}
-
-
-a,
-a::focus {
-    text-decoration: none !important;
-    outline: 0;
-}
-
-a:hover {
-    text-decoration: none !important;
-    color: #f9f9ff;
-    outline: 0;
-}
-
-.container.fullwidth {
-    width: 100%;
-}
-
-.container.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.no-padding {
-    padding: 0;
 }
 
 .section-bg {
@@ -85,6 +49,7 @@ a:hover {
     background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
     background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
     background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    font-size: 16px !important;
 }
 
 .primary-btn {
