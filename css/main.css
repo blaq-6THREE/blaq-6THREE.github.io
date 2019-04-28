@@ -166,6 +166,14 @@ ul.left-ul {
     padding: 5px;
     border-radius: 5px;
 }
-
 /* https://mycolor.space/ */
 /* This is a resource for the gradients */
+
+.code {
+    background-color: #D3D3D3;
+    font-family: "Courier", Times, serif;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 15px;
+    color: black
+}
