@@ -24,6 +24,13 @@
     <!--Font-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- https://highlightjs.org/ -->
+
+    <link rel="stylesheet" href="../../css/highlight.css">
+
     <!-- CSS============================================= -->
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -100,17 +107,66 @@
                 <div class="list-group">
                     <h4>who is a Makefile?</h4>
                     
-                    <p>Let us consider the following example</p>
-                    
-                    <h3>code 1</h3>
-                    
-                    <h3>code 2</h3>
-                    
-                    <h3>code 3</h3>
-                    
-                    <h3>insert raw commnd for compiling the code</h3>
+                    <p>In order for us to slay this beast of a topic, let us consider the following example</p>
+<h5>add.h:</h5>
+    <pre>
+        <code class="cpp">
+    // add.h file
+    int add(int x, int y);
+        </code>
+    </pre>
+
+<h5>add.cpp</h5>
+    <pre>
+        <code class="cpp">
+    // add.cpp
+    #include "add.h"
+
+    int add(int x, int y)
+    {
+        return x + y;
+    }
+        </code>
+    </pre>
+
+<h5>main.cpp:</h5>
+    <pre>
+        <code class="cpp">
+    // main.cpp
+    #include &lt;iostream&gt;
+    #include "add.h" // Insert contents of add.h at this point. Note use of double quotes here.
+
+    int main()
+    {
+        std::cout &lt;&lt; "The sum of 3 and 4 is " &lt;&lt; add(3, 4) &lt;&lt; '\n' ;
+        return 0;
+    }
+        </code>
+    </pre>
+                    <p>Next open your terminal.</p>
+                    <p>cd into directory of these files.</p>
+                    <p>type:</p>
+<pre>
+    <code class="console">
+    Blaq TuTu $ g++ -o hello main.cpp add.cpp add.h -I.
+    </code>
+</pre>
                     
                     <h3>insert gif for running code with g++ here</h3>
+
+                    <p>This compiles the two .cpp files and names the executable hello. The <q>-I.</q> is included so that g++ will look in the
+                    current directory (.) for the include file <q>hellomake.h</q>. Without a makefile, the typical approach to the
+                    test/modify/debug cycle is to use the up arrow in a terminal to go back to your last compile command so you don't have
+                    to type it each time, especially once you've added a few more .c files to the mix.</p>
+    
+                    <p>Unfortunately, this approach to compilation has two downfalls. First, if you lose the compile command or switch
+                    computers you have to retype it from scratch, which is inefficient at best. Second, if you are only making changes to
+                    one .c file, recompiling all of them every time is also time-consuming and inefficient. So, it's time to see what we can
+                    do with a makefile.</p>
+                    <hr>
+                </div>
+
+                <div class="list-group">
                     <h3>Now Makefile</h3>
                     
                     <p>Explain what makefile are</p>
