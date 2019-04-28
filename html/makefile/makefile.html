@@ -17,8 +17,6 @@
     <!-- Site Title -->
     <title>Pre UML, CS</title>
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -62,7 +60,7 @@
                     <a class="nav-link" href="../../html/makefile/makefile.html">Makefiles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../html/git/git0.html">Git Tutorials</a>
+                    <a class="nav-link" href="../../html/git/git.html">Git Tutorials</a>
                 </li>
     
             </ul>
@@ -70,83 +68,86 @@
     </nav>
 
     <div class="container-fluid">
+        <h3>Makefiles</h3>
 
         <div class="row">
-            <div id="master-div" class="left col-sm-8">
+            <div class="left-content col-md-2">
+                <ul class="left-ul">
+                    <li class="list-item" onclick="viewSelector(event, 'intro')">Menu 1</li>
+                    <li class="list-item" onclick="viewSelector(event, 'mid')">Menu 2</li>
+                    <li class="list-item" onclick="viewSelector(event, 'end')">Menu 3</li>
+                </ul>
+            </div>
+    
+            <div id="master-div" class="left col-sm-7 middle-content">
+                <div class="list-group">
+                    <h2>Makefiles with an example</h2>
+                    
+                    <p>This <q>tutorial</q> in no way scratches the surface of a makefile and what is can do. Rather, it serves as a guide to understanding the pusrpose of a mailefile, the building blocks of a simple make file, and how to write one efficiently.</p>
 
-                <div id="tabs">
-                    <ul>
-                        <li><a href="#tabs-1">Nunc tincidunt</a></li>
-                        <li><a href="#tabs-2">Proin dolor</a></li>
-                        <li><a href="#tabs-3">Aenean lacinia</a></li>
-                    </ul>
-                <!-- Introduction -->
-                    <div id="tabs-1" class="list-group">
-                        <h2>Makefiles with an example</h2>
+                    <p>Think of this as a starter kit for students who will be using makefiles in the future and need an introductory course.</p>
 
-                        <p>Shamefully, this <q>tutorial</q> does not begin to scrathc the surface when it comes to the
-                            power of
-                            using or
-                            understanding Makefiles</p>
+                    <p>Cos LAWD knows when it comes to makefiles,</p>
 
-                        <p>rather, it serves as a starter kit for students who will be needing Makefiles for their
-                            little projects.
-                        </p>
-
-                        <h4>who is a Makefile?</h4>
-
-                        <p>Let us consider the following example</p>
-
-                        <h3>code 1</h3>
-
-                        <h3>code 2</h3>
-
-                        <h3>code 3</h3>
-
-                        <h3>insert raw commnd for compiling the code</h3>
-
-                        <h3>insert gif for running code with g++ here</h3>
-
+                    <div>
+                        <img src="https://media.giphy.com/media/qfSGgKRk6GIXS/giphy.gif" alt="" srcset="" width="480" height="337">
                     </div>
-
-                    <!-- Middle Content -->
-                    <div class="list-group" id="tabs-2">
-                        <h3>Now Makefile</h3>
-
-                        <p>Explain what makefile are</p>
-
-                        <p>show example things and what they mean</p>
-
-                        <p>run example command</p>
-
-                        <p>use gifs to show examples</p>
-
-                        <p>explain what the cflags mean</p>
-
-                        <p></p>
-
-                        <p></p>
-                    </div>
-
-                    <!-- Conclusion -->
-                    <div id="tabs-3" class="list-group">
-                        <h3>Season finale</h3>
-
-                        <p>Sadly, we have to end it. The dragon has not been killed yet, but young one I will have to
-                            leave you be
-                        </p>
-
-                        <p>This sword I leave you with shall guide you. Sharpen it and be better in its use.</p>
-
-                        <h3>INSERT gif of namaste</h3>
-                    </div>
+                    
                 </div>
+                
+                <hr>
+                
+                <div class="list-group">
+                    <h4>who is a Makefile?</h4>
+                    
+                    <p>Let us consider the following example</p>
+                    
+                    <h3>code 1</h3>
+                    
+                    <h3>code 2</h3>
+                    
+                    <h3>code 3</h3>
+                    
+                    <h3>insert raw commnd for compiling the code</h3>
+                    
+                    <h3>insert gif for running code with g++ here</h3>
+                    <h3>Now Makefile</h3>
+                    
+                    <p>Explain what makefile are</p>
+                    
+                    <p>show example things and what they mean</p>
+                    
+                    <p>run example command</p>
+                    
+                    <p>use gifs to show examples</p>
+                    
+                    <p>explain what the cflags mean</p>
+                    
+                    <p></p>
+                    
+                    <p></p>
+                </div>
+    
+                <div class="list-group">
+                    <h3>Season finale</h3>
+                    
+                    <p>Sadly, we have to end it. The dragon has not been killed yet, but young one I will have to
+                        leave you be
+                    </p>
+                    
+                    <p>This sword I leave you with shall guide you. Sharpen it and be better in its use.</p>
+                    
+                    <h3>INSERT gif of namaste</h3>
+                </div>
+    
             </div> <!-- end of master-div -->
+    
+            <div class="col-md-3">
+                <div id="right-hint" class="right-content">
+    
+                </div>
+            </div>
         </div> <!-- end of row-div -->
-
-        <div class="right col-md-4" id="right-hint">
-
-        </div>
     </div>
 
     <script src="js/main.js"></script>

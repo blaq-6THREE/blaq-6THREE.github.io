@@ -1,9 +1,16 @@
 body {
     color: black !important;
     background: #f9f9ff !important;
+    background-image: linear-gradient(to left top, #82a7da, #a9bbe3, #cad0ec, #e6e7f5, #ffffff) !important;
     font-family: "Roboto" !important;
     font-size: 15px !important;
     padding-top: 70px;
+    height: 100%;
+}
+
+html{
+    height: 100%;
+    margin: 0;
 }
 
 .pagination{
@@ -116,3 +123,49 @@ body {
         display: block;
     }
 }
+
+
+/* This is the setting for all the various webpages */
+li.list-item {
+    padding: 20px;
+}
+
+.left-content {
+    height: 50px;
+}
+
+ul.left-ul {
+    /* margin: 0; */
+    /* padding: 60; */
+    border-radius: 3px;
+    background-image: linear-gradient(to top, #dae0e9, #e4e7ee, #eeeff4, #f7f7f9, #ffffff);
+    list-style-type: none;
+}
+
+.middle-content {
+    border: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(24, 24, 24, 0.787);
+    padding: 15px;
+    overflow-y: auto;
+    height: 650px;
+}
+
+.master-div {
+    overflow-y: auto;
+    height: 550px;
+}
+
+.right-content {
+    height: 300px;
+    background-image: linear-gradient(to right top, #dae0e9, #e4e7ee, #eeeff4, #f7f7f9, #ffffff);
+    color: azure;
+    overflow-y: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* https://mycolor.space/ */
+/* This is a resource for the gradients */
