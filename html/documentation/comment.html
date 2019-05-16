@@ -70,7 +70,7 @@
     </nav>
 
     <div class="container-fluid">
-        <h3>Commenting</h3>
+        <h2>Commenting</h2>
         
         <div class="row">
             <div class="left-content col-md-2">
@@ -95,36 +95,29 @@
             </div>
 
             <div id="master-div" class="left col-sm-7 middle-content">
+                <!-- 1st div -->
                 <div class="list-group">
-                    <p>30 minutes into looking at some 2 year old code written by these hands, it hit me! I did not
-                        understand my own code. The
-                        variable names looked weird, the methods and their parmeters looked weird, and worse of all,
-                        what was supposed to serve
-                        as my saving grace (comments) was not present. And when it was, it appeared badly written.</p>
+                    <p>30 minutes into looking at some 2 year old code written by my hands, it hit me! I was lost. I did not understand my own code. The variables looked new, the methods and their parameters looked off, and worse of all, I had little to no saving grace -- I had no <b>comments</b> in my code.</p>
 
-                    <p>Funny thing is, the source code was for a group project and not one of the group members
-                        complained. We were all present
-                        in one room whenever we worked on the project yet nt a single soul felt the need to comment
-                        through it.</p>
+                    <p>What's worse, the source code I was going through was a group project and not one of the group members complained commenting. We were all <b>present</b> in whenever we worked on the it, yet not a single soul felt there was the need to raise the commenting topic.</p>
 
-                    <p>BUT this is bad practice. The present me now suffers the decisions the old me didn’t make which
-                        is taking the time to
-                        comment though the source code.</p>
-
-                    <p>This tutorial serves to anwser the questions</p>
+                    <p>And now I suffer. The present me now suffers the decisions the old me didn’t make. Not commenting not to comment though the source code.</p>
+                    
+                    <p>This tutorial serves to deal with a disease. Most of use do not comment through our code. Typing is too much work as it is so why comment? This study guide serves to anwser that quesiton and these:</p>
 
                     <ul>
                         <li>What are comments?</li>
                         <li>How to comment.</li>
                         <li>How not to comment.</li>
                     </ul>
-                    <p>What then are comment?</p>
 
-                    <p>Commenting as an art is the use of high level language, English (whichever language you speak),
-                        to describe what your
-                        program does.</p>
+                    <h3>What then are comment?</h3>
 
-                    <h3>NOTE: These are merely guidelines I developed. Take this as a “how I would have commented
+                    <p>Commenting as an art is the use of high level language, English (whichever language), to describe what your program does.</p>
+
+                    <p>Generally ignored by compilers and interpreters, they are put in place with the purpose of making source code easier to understand by humans</p>
+
+                    <h3 class="note">NOTE: These are merely guidelines I developed. Take this as a “how I would have commented
                         through my code."</h3>
 
                     <p>We shall examin some example code, and study how comments should be used in them.</p>
@@ -132,8 +125,9 @@
 
                 <hr>
 
+                <!-- 2nd div -->
                 <div class="list-group">
-                    <p>Consider the following cases</p>
+                    <p>Consider the following cases.</p>
 
                     <h3>Case A:</h3>
 
@@ -141,11 +135,11 @@
     <code class="java">
     // Let x be length
     // Let y be width
-    // Let A be area of square
+    // Let a be area of square
 
-    int x = 0;
-    int y = 0;
-    int a = 0;
+    double x = 0.0;
+    double y = 0.0;
+    double a = 0.0;
     .
     .
     .
@@ -153,14 +147,11 @@
     </code>
 </pre>
 
-                    <p>Without knowing what the question was, the code written makes some sense. This is heavily due to
-                        the presence of
-                        comments. If we metally ommit them the variables x, y, a will not make sense, or at least it
-                        will take the reader a long
-                        time to figure out what the code is meant to do.</p>
+                    <p>At a glance, the code above makes some sense. There isn't the need to decipher and reverse engineer. This is heavily due to the presence of comments. They clarify what is happening within the code.</p>
 
-                    <p>With the comments serving as explanations you are able to understand that the code calculates the
-                        Area of a Rectangle.</p>
+                    <p>Because code is written is meant for the compiler and intepreter, should we mentally ommit the comments the variables <b>x</b>, <b>y</b>, <b>a</b> will not make sense, or at least it will take the reader a long time to figure out.</p>
+
+                    <p>With comments serving as explanations the reader is able to understand that the code calculates the Area of a Rectangle.</p>
 
                     <h3>Case B:</h3>
 
@@ -176,51 +167,50 @@
     </code>
 </pre>
 
-                    <p>Again, without having to give it too much thought one is able to deduce from the equation written
-                        that it is an equation
-                        that uses the variables length and width.</p>
+                    <p>Case B above has no comments, however, one is able to understand what it does.</p>
 
-                    <hr>
+                    <p>Without having to give it too much thought one is able to deduce from the variables names provided that the program calculates the area by taking the length and width in it's calculations.</p>
 
-                    <p>As students, we are expected to comment through our source code. I know, Robert. Dr. Great
-                        Professor wants us to write
-                        comments on what the code is doing, yet we aren't taught to comment let alone comment properly.
-                    </p>
+                    <div class="inbod"
 
-                    <p>We are given the notion that so far as there is a comment, it serves as an explanation, and
-                        you’re all set.</p>
+                        <p>As students, we are expected to comment through our source code. I know, Robert Doe! Dr. Great Professor wants us to write comments on what the code does, what it will do, and what it has done. Yet we aren't taught to comment let alone comment properly.</p>
+    
+                        <p>We are given the notion that so far as there is a comment, it serves as an explanation, and you’re all set.</p>
+    
+                        <p>But that is not the case. As stated by Dr. Bjarne Stroustrup, creator of C++, <q>comments should be to say things that you can not do well in code.</q> Meaning, only put comments inside of your code if your code will be difficult to understand when glanced at.</p>
+    
+                        <p> <b>Case 1</b> will be difficult to understand without comments and <b>Case 2</b> will have no need for comments as it does a great job of naming variables.</p>
+    
+                        <p>We will examin the types of comments next.</p>
 
-                    But that is not the case. As stated by Dr. Bjarne Stroustrup, creator of C++, "comments should be to
-                    say things that you
-                    can not do well in code."
-                    Meaning, only put comments inside of your code if your code will be difficult to understand when
-                    glanced at.
+                    </div>
 
-                    <p>Case 1 will be difficult to understand without comments and Case 2 will have no need for comments
-                        as it does a great job
-                        of naming variables.</p>
-
-                    <p>We will examin the types of comments next.</p>
                 </div>
 
                 <hr>
 
+                <!-- 3rd div -->
                 <div class="list-group">
 
-                    <h4>Naturally, most programming languages have 2 commenting approaches to them. They include Inline Commenting & Block Commenting.</h4>
+                    <p>Naturally (lol), most programming languages have 2 commenting approaches to them. They include <b>Inline Commenting</b> & <b>Block Commenting</b>.</p>
+
+                    <p>We will consider Inline Commenting next.</p>
 
                     <h3>Inline Commenting:</h3>
-                    <p>Most programming languages have inline comments, but its use is pretty tricky. They serve the
-                        purpose of having to
-                        explain code that is not self documenting. That is, if it doesn’t make sense at a glance,
-                        comment it.</p>
 
-                    <p>Do not overwhelm yourself or a reader of your code by providing comments for every line of code.
-                    </p>
+                    <p>Most programming languages have inline comments, but its use is pretty tricky. They serve the purpose of having to explain code that is not self documenting. That is, <b>if it doesn’t make sense at a glance, comment it</b>. Programming is a hard task as it is. Saving your future self, and potential readers of what is left of our sanity should be important to us.</p>
 
-                    <p>Let us consider Case C below.</p>
+                    <p>As a note you myself I say, <q>IF IT DOESN'T MAKE SENSE, COMMENT IT!</q></p>
 
-                    <h4>Case C:</h4>
+                    <p>However do not be that guy! That one person whose comments outweigh his sourcecode. Yes, Philp Gray. Don't be Philip Gray!</p>
+
+                    <p>Do not overwhelm yourself or a reader of your code by providing comments for every line of code.</p>
+
+                    <p>The world would be a better place if you didn't do that! Save some characters!</p>
+
+                    <p>Let us consider Case C below!</p>
+
+                    <h3>Case C:</h3>
 
 <pre>
     <code class="java">
@@ -239,15 +229,9 @@
     </code>
 </pre>
 
-                    <p>Case C above is what proper commenting should look like. You notice that without having to give
-                        it
-                        too much thought the
-                        equation written is understood.</p>
+                    <p>Case C above is what proper commenting should look like. You notice that without having to give it too much thought the program written is understood.</p>
 
-                    <p>Notice also that naming the variabes very well reduces the chance of redundancy. It is not needed
-                        to
-                        do the following in
-                        lines 1 to 3.</p>
+                    <p>Notice also that naming the variabes properly reduces the chance of redundancy. It is not needed to do the following in lines 1 to 3</p>
 
 <pre>
     <code class="java">
@@ -270,30 +254,25 @@
     </code>
 </pre>
 
-                    <p>when the variables names have done a good job at that.</p>
+                    <p>when the variables names do a good job at that.</p>
 
-                    <p>It stresses the point of commenting. If variables are named properly, providing comments for
-                        every
-                        line of code becomes
-                        unnecessary. You only write comment to explain certain things, i.e. to explain what certain
-                        absurd
-                        lines of code do.</p>
+                    <p>It stresses the point of commenting. If variables are named properly, providing comments for every line of code becomes unnecessary. You only write comment to explain certain things, i.e., to explain what certain absurd lines of code do.</p>
 
-                    <h4>NOTE: Inline comments can be over used. DO NOT be that one person who has Inline comments on
-                        every
-                        line</h4>
+                    <p>NOTE: Inline comments can be over used. DO NOT be that one person who has Inline Comments on every line</p>
+
+                    <p>DO NOT be Philp Gray!</p>
 
                 </div>
 
-                <div class="list-group">
-                    <h2>Block Commenting:</h2>
+                <hr>
 
-                    <p>The main purpose to which Block Comments are used is their paragraphing ability. For instance,
-                        when
-                        you want to inlcude
-                        a lengthy explanation as to what a function does, Block Comments become bae. Consider the
-                        following;
-                    </p>
+                <!-- 4th div -->
+                <div class="list-group">
+                    <h3>Block Commenting:</h3>
+
+                    <p>The power of Block Comments lie their paragraphing ability. For instance, when you want to inlcude a lengthy explanation as to what a function does, Block Comments become bae.</p>
+
+                    <p>Consider the following:</p>
 
 <pre>
     <code class="java">
@@ -315,12 +294,8 @@
     </code>
 </pre>
 
-                    <p>It doesn’t take a genius to figure out what the above methods do, however, their parameters are
-                        confusing. Regularly,
-                        one would have to use In-line comments to do a little bit of explaining but thanlkfully that
-                        isnt
-                        needed. The beauty of
-                        Block Commenting can be seen below.</p>
+                    <p>It doesn’t take a genius to figure out what the above methods do, however, their parameters are confusing. Regularly, one would have to use Inline comments to do a little bit of explaining, but thankfully that isn't needed. The beauty of Block Commenting can be seen below.</p>
+
 <pre>
     <code class="java">
     /**
@@ -361,30 +336,23 @@
     </code>
 </pre>
 
-                    <p>The main method/function above uses both Inline and Block Commenting. Looking at it at a glance,
-                        the
-                        comments bring the
-                        dead (absurd) part of the code to life.</p>
+                    <p>The main method/function above uses both Inline and Block Commenting. Looking at it at a glance, the comments bring the dead (absurd) part of the code to life.</p>
 
                 </div>
+
+                <hr>
+
+                <!-- 5th div -->
                 <div class="list-group">
                     <h3>Conclusion:</h3>
 
-                    <p>In conclusion one must diligently put in effort in the selection of the identifiers. This means
-                        the names of the
-                        variables, classes, methods and what not must serve the purpose of their name.</p>
+                    <p>In conclusion one must diligently put in effort in the selection of identifiers. This means the names of the variables, classes, methods and what not must serve the purpose of their name.</p>
 
-                    <p>The importance of this action is that a properly named identifier cuts the reduces the risk of
-                        over commenting which in
-                        turn increases the chance of ones understanding.</p>
+                    <p>The importance of this action is that a properly named identifier reduces the risk of over commenting increasing the chance of ones understanding of the sourcecode.</p>
 
-                    <p>Remember, comments are not for your present self, but for your future self, potential inheritors
-                        of your program, and
-                        anyone.</p>
+                    <p>Remember, do not be Philip Gray!</p>
 
-                    <p>NOTE: To ensure proper commenting one should employ better naming of identifiers, and comments
-                        provided should be for
-                        lines of code that are difficult to understand.</p>
+                    <p>Remember, comments are not for your present self, but for your future self, potential inheritors of your program, and anyone.</p>
 
                     <p>Check <a href="https://medium.freecodecamp.org/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83">this</a> out for more details.</p>
                 </div>
@@ -395,7 +363,7 @@
                 <div id="right-hint" class="right-content">
                 
                 </div>
-            </div>            
+            </div>
         </div> <!-- end of row-div -->
     </div>
     <script src="../../js/main.js"></script>
